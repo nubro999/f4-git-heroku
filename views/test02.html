@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+    />
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/main.css">
+  <style>
+ 
+    .swiper1 {
+      width: 100%;
+      height: 100%;
+    }
+
+    .swiper1 .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+
+      /* Center slide text vertically */
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+    }
+
+    .swiper1 .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  </style>
+  <style>
+     
+    .swiper2 {
+      width: 100%;
+      height: 100%;
+    }
+
+    .swiper2 .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+
+      /* Center slide text vertically */
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+    }
+
+    .swiper2 .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  </style>
+
+  <style>
+   /* :root{
+      --swiper-theme-color : red; 
+      --swiper-pagination-color : pink; 
+      // css : 변수 지정하여 사용하는 법 
+    }
+    */
+    .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
+      background: red ;
+    } 
+    .swiper-button-next:after, .swiper-button-prev:after{
+        color:red; 
+    }
+
+    nav ul{ display: flex; }
+    nav a{ display: block; padding: 10px;}
+  </style>
+</head>
+<body> 
+  <nav>
+    <ul>
+      <li><a href="/makeup">makeup main</a></li>
+      <li><a href="/sub">makeup sub</a></li>
+      <li><a href="/about">makeup about</a></li>
+    </ul>
+  </nav>
+  <header>
+    <div class="mainBanner">
+      <div class="slider">
+        <div class="swiper1 mySwiper1">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="./images/0.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="./images/1.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="./images/2.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="./images/3.jpg" alt="">
+            </div>
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <section>
+      <div class="slider">
+        <div class="swiper2 mySwiper2">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="./images/0.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="./images/1.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="./images/2.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="./images/3.jpg" alt="">
+            </div>
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+      <div class="serchForm-container">
+          <form action="" id="searchProduct">
+            <input type="text" class="product" id="product" name="product" 
+                placeholder="제품명을 검색하세요"
+                autocomplete="off"
+            >
+          </form>
+          <form action="" id="searchBrand">
+            <select  class="brand" id="brand" >
+                  <option data-value="">브랜드명을 검색하세요</option>
+                  <option data-value="almay">almay</option>
+                  <option data-value="benefit">benefit</option>
+                  <option data-value="dalish">dalish</option>
+                  <option data-value="colourpop">colourpop</option>
+                  <option data-value="mistura">mistura</option>
+            </select>
+          </form>
+      </div>
+      
+      <div class="list-container">
+           <div class="list-content">
+                <!-- 
+                  <div class="list-item">
+                    <div class="img-box"><img src="" alt=""></div>
+                    <div class="product-name"></div>
+                    <div class="product-price"></div>
+                    <div class="product-detail">
+                        <a href="">자세히 보기</a>
+                    </div>
+                    <div class="pruduct-colors">
+                      <ul>
+                        <li></li>
+                      </ul>
+                    </div>
+                </div>
+               -->
+           </div>
+      </div>
+  </section>
+
+  <footer>
+    <div class="site-footer"><p class="footer-top">질문이 있으신가요? 문의 전화: &nbsp;<a class="footer-top-a" href="tel:080-001-9587">080-001-9587</a></p><ul class="footer-links structural"><li class="footer-link-item" placeholder="footer_responsive_link_faq_item"><a class="footer-link" data-uia="footer-link" href="https://help.netflix.com/support/412" placeholder="footer_responsive_link_faq"><span id="" data-uia="data-uia-footer-label">자주 묻는 질문</span></a></li><li class="footer-link-item" placeholder="footer_responsive_link_help_item"><a class="footer-link" data-uia="footer-link" href="https://help.netflix.com" placeholder="footer_responsive_link_help"><span id="" data-uia="data-uia-footer-label">고객 센터</span></a></li><li class="footer-link-item" placeholder="footer_responsive_link_account_item"><a class="footer-link" data-uia="footer-link" href="/youraccount" placeholder="footer_responsive_link_account"><span id="" data-uia="data-uia-footer-label">계정</span></a></li><li class="footer-link-item" placeholder="footer_responsive_link_media_center_item"><a class="footer-link" data-uia="footer-link" href="https://media.netflix.com/" placeholder="footer_responsive_link_media_center"><span id="" data-uia="data-uia-footer-label">미디어 센터</span></a></li><li class="footer-link-item" placeholder="footer_responsive_link_relations_item"><a class="footer-link" data-uia="footer-link" href="http://ir.netflix.com/" placeholder="footer_responsive_link_relations"><span id="" data-uia="data-uia-footer-label">투자 정보(IR)</span></a></li><li class="footer-link-item" placeholder="footer_responsive_link_jobs_item"><a class="footer-link" data-uia="footer-link" href="https://jobs.netflix.com/jobs" placeholder="footer_responsive_link_jobs"><span id="" data-uia="data-uia-footer-label">입사 정보</span></a></li><li class="footer-link-item" placeholder="footer_responsive_link_waysToWatch_item"><a class="footer-link" data-uia="footer-link" href="/watch" placeholder="footer_responsive_link_waysToWatch"><span id="" data-uia="data-uia-footer-label">넷플릭스 지원 디바이스</span></a></li><li class="footer-link-item" placeholder="footer_responsive_link_terms_item"><a class="footer-link" data-uia="footer-link" href="https://help.netflix.com/legal/termsofuse" placeholder="footer_responsive_link_terms"><span id="" data-uia="data-uia-footer-label">이용 약관</span></a></li><li class="footer-link-item" placeholder="footer_responsive_link_privacy_separate_link_item"><a class="footer-link" data-uia="footer-link" href="https://help.netflix.com/legal/privacy" placeholder="footer_responsive_link_privacy_separate_link"><span id="" data-uia="data-uia-footer-label">개인정보</span></a></li><li class="footer-link-item" placeholder="footer_responsive_link_cookies_separate_link_item"><a class="footer-link" data-uia="footer-link" href="#" placeholder="footer_responsive_link_cookies_separate_link"><span id="" data-uia="data-uia-footer-label">쿠키 설정</span></a></li><li class="footer-link-item" placeholder="footer_responsive_link_corporate_information_item"><a class="footer-link" data-uia="footer-link" href="https://help.netflix.com/legal/corpinfo" placeholder="footer_responsive_link_corporate_information"><span id="" data-uia="data-uia-footer-label">회사 정보</span></a></li><li class="footer-link-item" placeholder="footer_responsive_link_contact_us_item"><a class="footer-link" data-uia="footer-link" href="https://help.netflix.com/contactus" placeholder="footer_responsive_link_contact_us"><span id="" data-uia="data-uia-footer-label">문의하기</span></a></li><li class="footer-link-item" placeholder="footer_responsive_link_speed_test_item"><a class="footer-link" data-uia="footer-link" href="https://fast.com" placeholder="footer_responsive_link_speed_test"><span id="" data-uia="data-uia-footer-label">속도 테스트</span></a></li><li class="footer-link-item" placeholder="footer_responsive_link_legal_notices_item"><a class="footer-link" data-uia="footer-link" href="https://help.netflix.com/legal/notices" placeholder="footer_responsive_link_legal_notices"><span id="" data-uia="data-uia-footer-label">법적 고지</span></a></li><li class="footer-link-item originals-link" placeholder="footer_responsive_link_only_on_netflix_item"><a class="footer-link" data-uia="footer-link" href="https://www.netflix.com/kr/browse/genre/839338" placeholder="footer_responsive_link_only_on_netflix"><span id="" data-uia="data-uia-footer-label">오직 넷플릭스에서</span></a></li></ul><div class="lang-selection-container" id="lang-switcher"><div data-uia="language-picker+container" class="ui-select-wrapper"><label for="lang-switcher-select" class="ui-label"><span class="ui-label-text">언어 선택</span></label><div class="select-arrow medium prefix globe"><select data-uia="language-picker" class="ui-select medium" id="lang-switcher-select" tabindex="0" placeholder="lang-switcher"><option selected="" lang="ko" value="/kr/" data-language="ko" data-country="KR">한국어</option><option lang="en" value="/kr-en/" data-language="en" data-country="KR">English</option></select></div></div></div><p class="footer-country">넷플릭스 대한민국</p><div class="copy-text"><div class="copy-text-block">넷플릭스서비시스코리아 유한회사 통신판매업신고번호: 제2018-서울종로-0426호 전화번호: 080-001-9587</div><div class="copy-text-block">대표: 레지널드 숀 톰프슨</div><div class="copy-text-block">이메일 주소: korea@netflix.com</div><div class="copy-text-block">주소: 대한민국 서울특별시 종로구 우정국로 26, 센트로폴리스 A동 20층 우편번호 03161</div><div class="copy-text-block">사업자등록번호: 165-87-00119</div><div class="copy-text-block">클라우드 호스팅: Amazon Web Services Inc.</div><div id="" class="copy-text-block" data-uia=""><a href="http://www.ftc.go.kr/bizCommPop.do?wrkr_no=1658700119">공정거래위원회 웹사이트</a></div></div></div>
+  </footer>
+  <script>
+    const URL = 'http://makeup-api.herokuapp.com/api/v1/products.json?brand=maybelline';
+    //const URL = 'http://makeup-api.herokuapp.com/api/v1/products.json';
+    //const URL = 'https://api.coinpaprika.com/v1/tickers';
+    const listContent = document.querySelector(".list-content");
+
+    let makeupData = []; // 900 정도
+    let myColors2 = [];
+    // 색상 정보가 없는 제품을 위해서 별도의 색상 정보를 만들어 둠 
+    let myColors = [
+        {
+          "hex_value": "#FB8684",
+          "colour_name": "Deep Coral  "
+        },
+        {
+          "hex_value": "#F27988",
+          "colour_name": "Deep Rose "
+        },
+        {
+          "hex_value": "#C94A50",
+          "colour_name": "Deep Wine "
+        },
+        {
+          "hex_value": "#FFAAAF",
+          "colour_name": "Light Rose "
+        },
+        {
+          "hex_value": "#FC9D8F",
+          "colour_name": "Medium Coral  "
+        }
+    ]
+
+    console.log( myColors );
+
+    const getMakeupList = ()=>{
+      fetch(URL)
+      .then( makeups => makeups.json() )
+      .then( makeups => {
+          // console.log( makeups  );
+          makeupData = makeups;
+          myColor2 = makeups[2].product_colors; 
+          console.log(myColor2);
+          
+          // 여러개 데이터를 처리함 
+          listContent.innerHTML = "";
+          makeups.forEach( makeup =>{
+            productPrintScreen(makeup);
+          });
+      })
+    }
+
+    const productPrintScreen = (makeupData)=>{
+        const listItem = document.createElement('div');
+        listItem.classList.add('list-item');
+
+        const imgBox = document.createElement('div');
+        const img = document.createElement('img');
+        //img.setAttribute('src', makeupData.api_featured_image);  
+        img.setAttribute('src', makeupData.image_link);  
+        img.setAttribute('alt', makeupData.product_type);  
+        // <img src="path" >
+        imgBox.classList.add('img-box');
+        imgBox.appendChild(img);
+        //productDetailUrl
+        listItem.appendChild( imgBox);
+
+        const productColors = document.createElement('div');
+        productColors.classList.add('product-colors');
+        // <div class="pruduct-colors"></div>
+        //console.log( productColors );
+
+        const productColorUl = document.createElement('ul');
+        productColorUl.classList.add('product-colors-ul');
+    
+        let colors = makeupData.product_colors.length ? makeupData.product_colors.slice(0, 5) : myColors; // 배열의 데이터를 0 ~5번까지 가옴 
+        colors.forEach(color=>{
+          const li = document.createElement('li'); // li 태그만들기
+          li.style.background = color.hex_value;
+          li.innerHTML = color.colour_name;
+       
+          productColorUl.appendChild(li);
+          // ul.product-colors-ul>li 
+        });
+        productColors.appendChild( productColorUl); 
+        /* <div class="pruduct-colors">
+          <ul>
+            <li></li> .....
+          </ul>
+        </div> */
+        listItem.appendChild( productColors);
+
+        const productName = document.createElement('div');        
+        productName.classList.add('product-name');
+        // productName.innerHTML = makeupData.name.split(" ").slice(1, 5);
+        // console.log( makeupData.name.split(" "));
+        // 배열을 다시 , 없이 문자열로 리턴 
+        const arys = makeupData.name.split(" ").slice(1, 5);
+        let brandname = '';
+        arys.forEach( ary=>{
+            brandname += ` ${ary}`
+        })
+        productName.innerHTML = brandname.length >= 20 ? brandname.slice(0, 20) : brandname; 
+        listItem.appendChild( productName );
+      
+        const productPrice = document.createElement('div');
+        productPrice.classList.add('product-price');
+        //productPrice.innerHTML = `${makeupData.price_sign} ${makeupData.price} ${makeupData.currency}`;
+        productPrice.innerHTML = `<span class="strike">$ ${makeupData.price} CAD</span> <span>${parseInt(makeupData.price) + parseInt(makeupData.price) * 0.1}</span>`; // 할인표시
+        listItem.appendChild( productPrice);
+
+        const productDetailUrl = document.createElement('div');
+        const detailLink = document.createElement('a');
+        detailLink.innerHTML = '자세히 보기';
+        productDetailUrl.classList.add('product-detail');
+        detailLink.setAttribute('href', makeupData.product_link); // url
+        // <a href="url" >
+        productDetailUrl.appendChild(detailLink); 
+        listItem.appendChild( productDetailUrl);
+     
+        // console.log( listItem );
+        listContent.appendChild( listItem );
+    } // productPrintScereen End
+
+    getMakeupList(); 
+
+    
+  </script>
+  <script>
+      const searchProduct = document.querySelector('#searchProduct');
+      const searchBrand = document.querySelector('#searchBrand');
+
+      searchProduct.addEventListener('submit', (event)=>{
+        event.preventDefault();
+        const searchValue = document.querySelector('#product').value.toLowerCase(); 
+
+        const searchData = makeupData.filter( item => item.name.toLowerCase().includes(searchValue))
+        // contains:배열, includes:문자열 => 포함여부를 확인 후  true, false 리턴
+        // indexOf() => 포함위치를 숫자로 리턴
+        console.log( searchData ); //
+        listContent.innerHTML = ""; // 기존의 목록을 지우고 
+        searchData.map(item => productPrintScreen( item )); // 새로 쓰기 
+        //찾은 데이터를 화면에 뿌리기 
+        document.querySelector('#product').value = ''; // 검색하고 데이터 처리 후 문자열 지우기
+    })
+    searchBrand.addEventListener('submit', (event)=>{
+      event.preventDefault();
+
+    })
+  </script>
+  <script>
+    const selectBrand = document.querySelector('#brand');
+    selectBrand.addEventListener("change", (event)=>{
+          //console.log( event.target.value );
+          // http://makeup-api.herokuapp.com/api/v1/products.json?brand=boosh  
+          let BRAND_URL = `http://makeup-api.herokuapp.com/api/v1/products.json?brand=${event.target.value}`
+
+          //console.log( BRAND_URL);
+          fetch( BRAND_URL)
+          .then( items => items.json())
+          .then( items =>{
+              console.log(items);
+              listContent.innerHTML = "";
+              items.forEach( item=> productPrintScreen(item));
+              // 브랜드 검색은  가지고 있는 아이템이 다르므로 새로운 printScreen 만들어야 함 
+          })
+    })
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+  <script>
+    var swiper1 = new Swiper(".mySwiper1", {
+      pagination: {
+        el: ".mySwiper1 .swiper-pagination",
+        type: "progressbar",
+      },
+      navigation: {
+        nextEl: ".mySwiper1 .swiper-button-next",
+        prevEl: ".mySwiper1 .swiper-button-prev",
+      },
+    });
+  </script>
+  <script>
+    var swiper2 = new Swiper(".mySwiper2", {
+      slidesPerView: 3,
+      spaceBetween: 30,
+      slidesPerGroup: 3,
+      loop: true,
+      loopFillGroupWithBlank: true,
+      pagination: {
+        el: ".mySwiper2 .swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".mySwiper2 .swiper-button-next",
+        prevEl: ".mySwiper2 .swiper-button-prev",
+      },
+    });
+  </script>
+</body>
+</html>

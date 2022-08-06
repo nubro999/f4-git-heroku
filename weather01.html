@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div class="weather-container">
+    <div class="local"></div>
+    <div class="temp"></div>
+    <img class="icon" src="" alt="">
+  </div>
+
+  <script>
+    const API_URL = 'https://api.openweathermap.org/data/2.5/weather?lat=37.5605672&lon=126.9433486&appid=cd9b3338114adaf4b6459ba88393a631'
+
+    fetch(API_URL)
+    .then(data=>data.json())
+    .then( data=>{
+        document.querySelector('.local').innerHTML = data.name;
+        document.querySelector('.temp').innerHTML = data.main.temp;
+        const icon = `https://openweathermap.org/img/wn/${data.weather[0].icon}.png`;
+
+        document.querySelector('.icon').setAttribute('src', icon);
+    })
+  </script>
+  <!-- 
+    navigator.geolocation.getCurrentPosition((position) => {
+      console.log(position.coords.latitude, position.coords.longitude);
+      // 37.5605672 126.9433486
+    });
+
+    json
+    https://api.openweathermap.org/data/2.5/weather?lat=37.5605672&lon=126.9433486&appid=cd9b3338114adaf4b6459ba88393a631
+
+    xml 
+    https://api.openweathermap.org/data/2.5/weather?lat=37.5605672&lon=126.9433486&appid=cd9b3338114adaf4b6459ba88393a631&mode=xml
+
+    cd9b3338114adaf4b6459ba88393a631
+   -->
+</body>
+</html>
