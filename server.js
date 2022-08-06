@@ -13,7 +13,9 @@ app.listen(PORT, ()=>{
 app.get('/', (req, res)=>{
   res.sendFile(path.join(__dirname, 'views', 'index.html'));
 })
-
+app.get('/about', (req, res)=>{
+  res.sendFile(path.join(__dirname, 'views', 'index.html'));
+})
 // jemicom.dothome.co.kr/ajax/data/data.txt
 app.get('/text', (req, res)=>{
   res.sendFile(path.join(__dirname, 'weather02.html'));
